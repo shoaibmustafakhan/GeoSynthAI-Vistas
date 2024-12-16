@@ -161,42 +161,6 @@ const RegeneratePage = () => {
     }
   };
 
-  // const handleRegenerate = async () => {
-  //   if (!generatedImage) {
-  //     console.error("No generated image available for regeneration.");
-  //     return;
-  //   }
-  
-  //   setIsLoading(true); // Show loading indicator
-  
-  //   const invisibleLayer = invisibleLayerRef.current.toDataURL();
-  //   const maskBlob = dataURLToBlob(invisibleLayer);
-  //   const formData = new FormData();
-  //   formData.append("mask", maskBlob, "mask.png");
-  //   formData.append("image", generatedImage, "generatedImage.png");
-  
-  //   try {
-  //     const response = await axios.post(
-  //       "http://localhost:5006/inpaint",
-  //       formData,
-  //       {
-  //         headers: { "Content-Type": "multipart/form-data" },
-  //         responseType: "blob",
-  //       }
-  //     );
-  
-  //     // Handle the response
-  //     const newGeneratedImageBlob = response.data;
-  //     setGeneratedImage(newGeneratedImageBlob); // Update the generated image in context
-  
-  //     // Navigate to PreviewPage after regeneration
-  //     navigate("/preview");
-  //   } catch (error) {
-  //     console.error("Error uploading files.", error);
-  //   }
-  
-  //   setIsLoading(false); // Hide loading indicator after regeneration
-  // };
   const handleRegenerate = async () => {
     if (!generatedImage) {
       console.error("No generated image available for regeneration.");

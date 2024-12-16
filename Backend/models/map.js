@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-// Define the Map Schema
+
 const mapSchema = new mongoose.Schema({
   imageUrl: {
     type: String,
@@ -20,7 +20,6 @@ const mapSchema = new mongoose.Schema({
   },
 });
 
-// Create the Map Model
 const Map = mongoose.model('Map', mapSchema);
 
 module.exports = Map;

@@ -14,12 +14,6 @@ const Gallery = () => {
   const [images, setImages] = useState([]);
   const [viewImage, setViewImage] = useState(null);
 
-  // const defaultImages = [
-  //   { src: galleryImage1, name: "Default Image 1" },
-  //   { src: galleryImage2, name: "Default Image 2" },
-  //   { src: galleryImage3, name: "Default Image 3" },
-  // ];
-
   useEffect(() => {
     // Get all the generated images on component mount
     const fetchUserGeneratedImages = async () => {
@@ -62,7 +56,6 @@ const Gallery = () => {
       const imageExists = storedImages.some((img) => img.src === newImage.src);
       if (!imageExists) {
         const newImages = [...storedImages, newImage];
-        // setImages([...defaultImages, ...newImages]);
         localStorage.setItem("galleryImages", JSON.stringify(newImages));
       }
     }
@@ -77,14 +70,6 @@ const Gallery = () => {
     setViewImage(null);
     document.body.style.overflow = "auto"; // Re-enable scrolling
   };
-
-  //   const handleView = (image) => {
-  //   // Set the viewImage state
-  //   setViewImage(image.src);
-
-  //   // Navigate to the /preview page
-  //   navigate('/preview');
-  // };
 
   const handleDownload = (image) => {
     const link = document.createElement("a");
