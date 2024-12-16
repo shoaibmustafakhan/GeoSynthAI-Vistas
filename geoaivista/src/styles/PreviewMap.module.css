@@ -1,0 +1,287 @@
+/* General layout styling */
+.previewContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("../assets/UploadImagebg2.jpg") no-repeat center center/cover;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  gap: 20px;
+  padding: 0 20px; /* Add padding to avoid image overflow on smaller screens */
+}
+
+.content {
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 900px;
+  height: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
+  margin-bottom: 3rem;
+}
+
+.previewTitle {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Image preview section */
+.mapPreview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.mapImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: contain; /* Maintain aspect ratio */
+  max-height: 80vh; /* Limit the image height on smaller screens */
+}
+
+/* Align controls horizontally below the image */
+.horizontalControls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Input and buttons */
+.mapNameInput {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.saveButton,
+.zoomButton {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.saveButton:hover,
+.zoomButton:hover {
+  background-color: #0056b3;
+}
+
+/* Gallery and regenerate buttons at the bottom */
+.buttonContainer {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Gallery and Regenerate Buttons */
+.galleryButton,
+.regenerateButton {
+  padding: 10px 20px; /* Increased horizontal padding for better clickability */
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px; /* Default font size */
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.galleryButton:hover,
+.regenerateButton:hover {
+  background-color: #218838;
+}
+
+/* Popup styling */
+.popup {
+  position: absolute;
+  top: 10%; /* Position the popup near the top */
+  left: 47%;
+  margin-left: -100px; /* Adjust this value based on the popup width */
+  background-color: #079c57;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 999; /* Ensure it's on top of other content */
+  width: 300px; /* Set a fixed width */
+  text-align: center; /* Center the text inside the popup */
+}
+
+/* Fade-in animation for the popup */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (min-width: 1201px) {
+  .content {
+    width: 80%; /* Reduce the width for medium screens */
+    margin-top: 5rem; /* Adjust margin top for better alignment */
+    margin-bottom: 5rem;
+  }
+
+  .buttonContainer {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+}
+
+/* For screens below 1200px */
+@media (max-width: 1200px) {
+
+  .content {
+    width: 80%; /* Reduce the width for medium screens */
+    margin-top: 3rem; /* Adjust margin top for better alignment */
+  }
+
+  .previewTitle {
+    font-size: 22px; /* Slightly smaller title */
+  }
+
+  .mapNameInput {
+    font-size: 12px; /* Smaller font size for input */
+    padding: 8px; /* Reduced padding */
+  }
+
+  .saveButton,
+  .zoomButton {
+    font-size: 12px; /* Smaller font size for buttons */
+    padding: 8px 12px; /* Reduced padding */
+  }
+
+  .mapImage {
+    max-height: 70vh; /* Further reduce the image height */
+  }
+  .galleryButton,
+  .regenerateButton {
+    font-size: 12px; /* Slightly smaller font size */
+    padding: 8px 16px; /* Slightly reduced padding */
+  }
+}
+
+/* For screens below 992px (tablets) */
+@media (max-width: 992px) {
+
+  .content {
+    width: 95%; /* Further reduce the width */
+    margin-top: 3rem; /* Adjust margin top */
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .previewTitle {
+    font-size: 20px; /* Even smaller title */
+  }
+
+  .mapNameInput {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .saveButton,
+  .zoomButton {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .mapImage {
+    max-height: 60vh; /* Further reduce the image height */
+  }
+ 
+}
+
+/* For screens below 768px (phones) */
+@media (max-width: 768px) {
+
+  
+
+  .previewContainer {
+    padding: 0 10px; /* Reduce padding for small screens */
+  }
+
+  .content {
+    width: 100%; /* Full width on small screens */
+    margin-top: 2rem; /* Adjust margin top */
+  }
+
+  .previewTitle {
+    font-size: 18px; /* Even smaller title */
+  }
+
+  .mapNameInput {
+    font-size: 11px; /* Smaller font size */
+    padding: 6px;
+  }
+
+  .saveButton,
+  .zoomButton {
+    font-size: 11px; /* Smaller font size */
+    padding: 6px 10px; /* Reduced padding */
+  }
+
+  .mapImage {
+    max-height: 50vh; /* Further reduce the image height */
+  }
+ 
+}
+
+/* For screens below 576px (extra small phones) */
+@media (max-width: 576px) {
+
+  .previewTitle {
+    font-size: 16px; /* Smallest font size for title */
+  }
+
+  .mapNameInput {
+    font-size: 10px; /* Even smaller input font size */
+    padding: 5px;
+  }
+
+  .saveButton,
+  .zoomButton {
+    font-size: 10px; /* Smallest font size for buttons */
+    padding: 5px 8px; /* Smallest padding */
+  }
+
+  .mapImage {
+    max-height: 40vh; /* Significantly reduced image height */
+  }
+  .galleryButton,
+  .regenerateButton {
+    font-size: 10px; /* Even smaller font size */
+    padding: 6px 12px; /* Even smaller padding */
+  }
+}

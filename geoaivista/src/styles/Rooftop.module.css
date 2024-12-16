@@ -1,0 +1,397 @@
+/* Background */
+.background {
+	background-image: url("../assets/RequirementForm.jpg");
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  /* Form Container */
+  .formContainer {
+	background-color: rgba(0, 0, 0, 0.9);
+	padding: 20px;
+	border-radius: 30px;
+	max-width: 900px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	z-index: 1; /* Ensure it's above the overlay */
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+  }
+  
+  /* Titles */
+  .title {
+	color: #45a049;
+	font-size: 2rem;
+	margin-bottom: 10px;
+  }
+  
+  .subtitle {
+	color: #fff;
+	font-size: 16px;
+	margin-bottom: 20px;
+  }
+  
+  /* Image Editor */
+  .imageEditor {
+	width: 100%;
+	background-color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+	border-radius: 15px;
+	padding: 10px;
+	align-items: center;
+  }
+  
+  /* Editor Content */
+  .editorContent {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+	position: relative; /* Necessary for absolute positioning of the sidebar */
+	/* Removed overflow: hidden; */
+  }
+  
+  /* Left Panel */
+  .leftPanel {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+  /* Toolbar */
+  .toolbar {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 20px;
+  }
+  
+  .toolbarBtn {
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #2196f3;
+	background-image: linear-gradient(to right, #2196f3, #21cbf3);
+	color: white;
+	border: none;
+	border-radius: 30px;
+	cursor: pointer;
+	margin: 5px;
+	transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .toolbarBtn:hover {
+	background-color: #2980b9;
+	transform: translateY(-2px);
+	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .toolbarBtn:active {
+	transform: translateY(0);
+	box-shadow: none;
+  }
+  
+  .toolbarBtn:disabled {
+	background-color: #cccccc;
+	cursor: not-allowed;
+  }
+  
+  /* Finish Button */
+  .finishButton {
+	background-color: #e91e63;
+	background-image: linear-gradient(to right, #f06292, #e91e63);
+  }
+  
+  .finishButton:hover {
+	background-color: #d81b60;
+  }
+  
+  /* Canvas Container */
+  .canvasContainer {
+	border: 1px solid #ddd;
+	display: inline-block;
+	max-width: 100%;
+	overflow: hidden;
+  }
+  
+  .canvasContainer canvas {
+	max-width: 100%;
+	height: auto;
+	display: block;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+	position: absolute;
+	top: 0;
+	right: -1%;
+	width: 300px; /* Slightly wider for better spacing */
+	height: 100%;
+	background-color: #2c3e50; /* Dark blue */
+	box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+	padding: 20px;
+	transform: translateX(100%); /* Start hidden off-screen to the right */
+	transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+	z-index: 1; /* Ensure the sidebar is above other elements */
+	color: #ecf0f1; /* Light text color */
+  }
+  
+  .sidebarOpen {
+	transform: translateX(0); /* Move into view */
+	/* Removed visibility and z-index modifications */
+ visibility: hidden;
+  }
+  
+  /* Close Button */
+  .closeButton {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	background: none;
+	border: none;
+	color: #ecf0f1;
+	font-size: 2rem;
+	cursor: pointer;
+  }
+  
+  .closeButton:hover {
+	color: #e74c3c; /* Change color on hover */
+  }
+  
+  /* Brush Settings */
+  .brushSettings {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-top: 60px; /* Space for close button */
+  }
+  
+  .brushSettings h3 {
+	margin-bottom: 20px;
+	color: #ecf0f1;
+	font-size: 1.8rem;
+	font-weight: 600;
+  }
+  
+  .brushSettings label {
+	margin-bottom: 10px;
+	font-weight: 500;
+	color: #bdc3c7; /* Slightly lighter color for labels */
+  }
+  
+  .brushSettings input[type="color"],
+  .brushSettings input[type="range"] {
+	margin-bottom: 20px;
+	width: 100%;
+  }
+  
+  /* Input Styles */
+  .brushSettings input[type="color"] {
+	height: 40px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background-color: #34495e; /* Darker background */
+	border-radius: 5px;
+  }
+  
+  .brushSettings input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+  }
+  
+  .brushSettings input[type="color"]::-webkit-color-swatch {
+	border: none;
+	border-radius: 5px;
+  }
+  
+  .brushSettings input[type="range"] {
+	-webkit-appearance: none;
+	background-color: #34495e;
+	height: 6px;
+	border-radius: 5px;
+	outline: none;
+  }
+  
+  .brushSettings input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	background-color: #ecf0f1;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	cursor: pointer;
+  }
+  
+  .brushSettings input[type="range"]::-moz-range-thumb {
+	background-color: #ecf0f1;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	cursor: pointer;
+  }
+  
+  /* Icon Style */
+  .icon {
+	margin-right: 8px;
+	color: #ecf0f1;
+  }
+  
+  /* Overlay */
+  .overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 999; /* Just below the sidebar */
+  }
+  
+  /* Adjust z-index values */
+  .formContainer {
+	position: relative;
+	z-index: 1;
+  }
+  
+  /* Hover Effects */
+  .brushSettings input[type="color"]:hover {
+	background-color: #3b5998;
+  }
+  
+  .brushSettings input[type="range"]::-webkit-slider-thumb:hover {
+	background-color: #bdc3c7;
+  }
+  
+  .toolbarBtn:hover {
+	background-color: #2980b9;
+	transform: translateY(-2px);
+	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .toolbarBtn:active {
+	transform: translateY(0);
+	box-shadow: none;
+  }
+  
+  /* Submit Button */
+  .submitButton {
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #4caf50;
+	background-image: linear-gradient(to right, #4caf50, #45a049);
+	color: white;
+	border: none;
+	border-radius: 30px;
+	cursor: pointer;
+	margin-top: 40px;
+	transition: transform 0.2s, background-color 0.2s;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .submitButton:hover {
+	background-color: #45a049;
+	transform: translateY(-2px);
+	box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+
+  /* ... existing styles ... */
+
+/* Loading Overlay */
+.loadingOverlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 2000; /* Higher than other elements */
+  }
+  
+  /* Loading Spinner */
+  .loadingSpinner {
+	border: 16px solid #f3f3f3; /* Light grey */
+	border-top: 16px solid #3498db; /* Blue */
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	animation: spin 2s linear infinite;
+	margin-bottom: 20px;
+  }
+  
+  /* Loading Text */
+  .loadingText {
+	color: #fff;
+	font-size: 1.5rem;
+	text-align: center;
+	max-width: 80%;
+	margin: 0 auto;
+  }
+  
+  /* Spinner Animation */
+  @keyframes spin {
+	0% {
+	  transform: rotate(0deg);
+	}
+	100% {
+	  transform: rotate(360deg);
+	}
+  }
+
+
+
+  .detailsContainer {
+    margin-top: 20px;
+    color: #FFF;
+    background-color: #333; /* Optional background for contrast */
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+  
+  .topDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .detailsText {
+    margin: 0;
+    font-size: 1.1em;
+  }
+  
+  .bottomActions {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Space between the texts and the button */
+  }
+  
+  .detailsButton {
+    background-color: #1976D2;
+    border: none;
+    color: #FFF;
+    padding: 0.5em 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .detailsButton:hover {
+    background-color: #1565C0;
+  }
+  

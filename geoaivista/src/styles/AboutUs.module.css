@@ -1,0 +1,69 @@
+/** @format */
+
+.aboutSection {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	position: relative;
+	font-family: "Poppins", sans-serif;
+	overflow: hidden;
+}
+
+.aboutSection::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: url("../assets/AboutUsBg.jpeg") no-repeat center center/cover;
+	filter: blur(5px); 
+	-webkit-filter: blur(5px);
+	z-index: -1;
+}
+
+.overlay {
+	background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+	padding: 20px;
+	border-radius: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	max-width: 1200px;
+	width: 90%;
+}
+
+.content {
+	margin: 20px;
+}
+
+.infoContainer {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 20px;
+}
+
+.infoItem {
+	width: 30%;
+	padding: 10px;
+	text-align: center;
+}
+
+.icon {
+	width: 80px;
+	height: 80px;
+	margin-bottom: 10px;
+}
+
+h1 {
+	color: #fff;
+}
+
+h3 {
+	color: #0056b3;
+}
+
+p {
+	color: #fff;
+	text-align: start;
+}

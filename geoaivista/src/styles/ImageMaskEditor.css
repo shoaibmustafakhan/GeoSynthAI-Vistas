@@ -1,0 +1,48 @@
+.editor-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0;
+  }
+  
+  .upload-btn {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .upload-btn input[type="file"] {
+    display: none;
+  }
+  
+  .undo-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .brush-settings {
+    display: flex;
+    align-items: center;
+  }
+  
+  .canvas-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  
