@@ -54,7 +54,7 @@ The project is modular and operates through Flask APIs to enable flexible integr
 Note: PLEASE BE SURE TO READ THE FOLLOWING:
 In the Inference1.py code containing the SDXL Model inference, please input the path to your model's downloaded directory.
 For the masks and images, please be sure to refer the paths and names of the sample images and their corresponding masks into the `inference1.py` code where asked.
-For the pipeline.py code containing the GFPGANs and Roboflow Detection model inference, please make sure to download the GFPGANs model into the `flaskapi` folder.
+For the pipeline.py code containing the GFPGANs and Roboflow Detection model inference, please make sure to download the GFPGANs model folders into the `flaskapi` folder.
 
 
 The list of models can be accessed here:
