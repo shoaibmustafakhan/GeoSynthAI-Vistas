@@ -14,7 +14,7 @@ CORS(app)
 
 
 pipeline = StableDiffusionXLInpaintPipeline.from_pretrained(
-    r"C:\FYPMODEL\SDXL_Inpaint_Model",  # Path to the local model directory
+    r"PLEASE ENTER YOUR DOWNLOADED MODEL'S DIRECTORY HERE",  # Path to the local model directory
     torch_dtype=torch.float16  # Use float16 for faster inference
 ).to("cuda")
 
