@@ -43,7 +43,7 @@ The project is modular and operates through Flask APIs to enable flexible integr
 3. **Supporting Files**:
    - **Sample Images and Masks**:
      - Included in the `flaskapi` folder to help users test the pipeline easily.
-     - These can be used directly to send data to `inference1.py` through `main.py`.
+     - These can be used directly to send data to `inference1.py` and `pipeline.py` through `main.py`.
 
 4. **Web Interface**:
    - The project includes the **`backend`** and **`geoaivista`** folders for hosting a user-friendly web interface. While these folders allow for demonstration purposes, the core AI generation can function independently using the Flask APIs in the `flaskapi` folder.
