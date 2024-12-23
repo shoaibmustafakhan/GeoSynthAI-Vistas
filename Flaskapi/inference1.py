@@ -9,13 +9,10 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-# Explanation: To avoid reloading the model multiple times, load the model only once when the server starts.
-# This will prevent delays caused by repeated model loading when handling multiple requests.
-
 
 pipeline = StableDiffusionXLInpaintPipeline.from_pretrained(
-    r"PLEASE ENTER YOUR DOWNLOADED MODEL'S DIRECTORY HERE",  # Path to the local model directory
-    torch_dtype=torch.float16  # Use float16 for faster inference
+    r"PLEASE ENTER YOUR DOWNLOADED MODEL'S DIRECTORY HERE",       #PLEASE MAKE SURE YOU DOWNLOAD THE MODEL IN THE SAME FOLDER. CAN BE ACCESSED AT: https://huggingface.co/diffusers/stable-diffusion-xl-1.0-inpainting-0.1
+    torch_dtype=torch.float16
 ).to("cuda")
 
 

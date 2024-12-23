@@ -36,7 +36,7 @@ from house_detection import process_image_in_grid
 
 def run_gfpgan(input_path, output_dir):
     """Run GFPGAN on the input image"""
-    command = [
+    command = [                                                     # PLEASE MAKE SURE YOU PUT THE GFPGANs MODEL INTO THE SAME FOLDER. CAN BE ACCESSED HERE: https://github.com/TencentARC/GFPGAN
         'python',
         'inference_gfpgan.py',
         '-i', str(input_path),
