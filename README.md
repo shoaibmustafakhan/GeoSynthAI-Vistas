@@ -26,6 +26,9 @@ At its core, this project uses a finely tuned **Stable Diffusion XL (SDXL) Inpai
 
 ### **How It Works**
 
+![image](https://github.com/user-attachments/assets/512b9e3c-4049-420d-aa7e-2046e4b7095f)
+
+
 The project is modular and operates through Flask APIs to enable flexible integration. Here’s how the workflow is structured:
 
 1. **Core Files**:
@@ -93,6 +96,9 @@ https://github.com/TencentARC/GFPGAN
 
 6. **View Results**:
    - The generated outputs, enhanced images, and rooftop detection results will be displayed or saved for further use.
+  
+![image](https://github.com/user-attachments/assets/08336358-59cf-48d8-a8d0-70df3d028935)
+
 
 7. **Optional Web Interface**:
    - If demonstration via the web is required, use the `backend` and `geoaivista` folders to host the interface.
