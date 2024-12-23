@@ -60,6 +60,7 @@ For the pipeline.py code containing the GFPGANs and Roboflow Detection model inf
 The list of models can be accessed here:
 
 https://huggingface.co/diffusers/stable-diffusion-xl-1.0-inpainting-0.1
+
 https://github.com/TencentARC/GFPGAN
 
 
