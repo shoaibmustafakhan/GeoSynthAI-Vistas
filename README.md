@@ -117,3 +117,6 @@ This project brings unprecedented efficiency and affordability to urban planning
   - Provides actionable data for population estimation, zoning analysis, and infrastructure planning.
 
 With this system, urban planners and developers can create, refine, and analyze urban plans in minutes, enabling faster decision-making and reducing costs dramatically. Whether for quick prototyping or detailed development, this AI-powered solution is a game-changer for the industry.
+
+
+Our team welcomes further editions and contributions to this repository system to help us innovate and revolutionize Geo-Informatics, Urban Planning and Sustainable Development!
