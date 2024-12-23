@@ -1,0 +1,10 @@
+fastapi==0.88.0
+uvicorn==0.20.0
+requests==2.31.0
+flask==2.3.3
+flask-cors==3.0.10
+opencv-python==4.8.0.76
+matplotlib==3.8.0
+diffusers==0.18.0
+pillow==10.0.0
+numpy==1.26.0
