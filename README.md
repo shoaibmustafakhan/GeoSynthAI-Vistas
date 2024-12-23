@@ -62,27 +62,34 @@ The list of models can be accessed here:
 https://huggingface.co/diffusers/stable-diffusion-xl-1.0-inpainting-0.1
 https://github.com/TencentARC/GFPGAN
 
-1. **Set Up**:
+
+1. **Environment**:
+   - This code was made with cuda 12.4 and Pytorch cu124. CUDA 12.4 can be downloaded here: https://developer.nvidia.com/cuda-12-4-0-download-archive
+   - Please make sure to download PyTorch before the rest of the dependancies using the command: `pip3 install torch --index-url https://download.pytorch.org/whl/cu124`
+   - In case of setting up an environment, please make sure to run `pip install -r requirements.txt`.
+  
+     
+3. **Set Up**:
    - Ensure the necessary weights and GFPGAN are downloaded and configured.
    - Place `inference1.py`, `pipeline.py`, `main.py`, and the sample images and masks in the `flaskapi` folder.
 
-2. **Run APIs**:
+4. **Run APIs**:
    - Start `inference1.py` and `pipeline.py` as Flask servers:
      ```bash
      python inference1.py
      python pipeline.py
      ```
 
-3. **Execute Main Pipeline**:
+5. **Execute Main Pipeline**:
    - Once the APIs are running, execute `main.py` to process inputs and generate results:
      ```bash
      python main.py
      ```
 
-4. **View Results**:
+6. **View Results**:
    - The generated outputs, enhanced images, and rooftop detection results will be displayed or saved for further use.
 
-5. **Optional Web Interface**:
+7. **Optional Web Interface**:
    - If demonstration via the web is required, use the `backend` and `geoaivista` folders to host the interface.
 
 ---
