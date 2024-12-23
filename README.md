@@ -1,5 +1,4 @@
-# README.md
-
+# **GeoSynthAI: Vistas**
 ## **AI-Powered Satellite Imagery for Urban Planning**
 
 ### **Overview**
