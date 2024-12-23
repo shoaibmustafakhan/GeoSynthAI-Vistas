@@ -5,6 +5,10 @@
 
 This project revolutionizes urban planning by utilizing advanced generative AI models to produce and enhance satellite imagery for development purposes. Traditionally, urban planning required investments of tens of thousands of dollars and years of effort to produce even an initial working draft. This process involved detailed feasibility studies, manual designs, and repetitive revisions. With this project, generating an urban plan on satellite imagery takes under 60 seconds and costs less than a dollar—primarily for hosting and VRAM usage for image generation.
 
+![Github_Demo](https://github.com/user-attachments/assets/3d283587-6120-4215-ba65-11b483bf8ece)
+
+
+
 At its core, this project uses a finely tuned **Stable Diffusion XL (SDXL) Inpainting model** alongside **GFPGAN** for enhancement and a custom-trained rooftop detection model for actionable outputs. It simplifies the complexities of urban planning and delivers outputs that are both visually coherent and practically relevant for decision-making in urban development.
 
 ---
