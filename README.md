@@ -1,6 +1,8 @@
 # **GeoSynthAI: Vistas**
 ## **AI-Powered Satellite Imagery for Urban Planning**
 
+This project is part of the Research & Development suite from GeoSynthAI. For more information and projects, please refer to our LinkedIn page: https://www.linkedin.com/company/geosynthai
+
 ### **Overview**
 
 This project revolutionizes urban planning by utilizing advanced generative AI models to produce and enhance satellite imagery for development purposes. Traditionally, urban planning required investments of tens of thousands of dollars and years of effort to produce even an initial working draft. This process involved detailed feasibility studies, manual designs, and repetitive revisions. With this project, generating an urban plan on satellite imagery takes under 60 seconds and costs less than a dollar—primarily for hosting and VRAM usage for image generation.
